@@ -2,6 +2,23 @@ describe('Popup', () => {
 
     const pageUrl = `http://localhost:4000/`
 
+    // FIXME: not working correctly, why?
+    // beforeAll(async () => {
+    //     const popupApiMock = await browser.mock('**' + '/popup');
+    //     popupApiMock.respond([{
+    //         message: "<p>This is an important message which requires a confirmation.</p>"
+    //     }], {
+    //         statusCode: 200
+    //     })
+
+    //     const popupApiMock2 = await browser.mock('**' + '/popup/confirmation');
+    //     popupApiMock2.respond([{
+    //         confirmationTracked: true
+    //     }], {
+    //         statusCode: 200
+    //     });
+    // });
+
     it('should be shown when page is loaded for first time', async () => {
         await browser.url(pageUrl);
 
